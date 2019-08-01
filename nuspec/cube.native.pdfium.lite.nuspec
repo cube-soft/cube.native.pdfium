@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <package >
     <metadata>
-        <version>1.0.3809.0</version>
+        <version>1.0.3809.1</version>
         <id>Cube.Native.Pdfium.Lite</id>
         <title>Cube.Native.Pdfium.Lite</title>
         <authors>clown,cube-soft,PDFium Authors</authors>
         <owners>clown,cube-soft</owners>
         <description>PDFium library without V8 and XFA modules.</description>
+        <releaseNotes>Version 1.0.3809.1 is corresponding to the PDFium module of Chromium 76.</releaseNotes>
         <copyright>Copyright © 2014 PDFium Authors. All rights reserved.</copyright>
         <tags>Cube Native PDFium</tags>
         <license type="expression">BSD-3-Clause</license>
