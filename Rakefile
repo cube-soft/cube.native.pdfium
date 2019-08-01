@@ -41,6 +41,7 @@ task :default => [:clean, :sync, :build_all, :pack_all]
 # --------------------------------------------------------------------------- #
 desc "Run glicent sync."
 task :sync do
+    sh("git submodule init")
     sh("git submodule update")
     sh("gclient sync --with_branch_heads")
 end
