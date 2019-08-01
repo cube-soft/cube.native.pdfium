@@ -4,7 +4,7 @@ entries = {
   'pdfium\\build': 'https://chromium.googlesource.com/chromium/src/build.git@4cebfa34c79bcfbce6a3f55d1b4f7628bb70ea8a',
   'pdfium\\buildtools': 'https://chromium.googlesource.com/chromium/src/buildtools.git@0218c0f9ac9fdba00e5c27b5aca94d3a64c74f34',
   'pdfium\\pdfium\\buildtools\\win:gn/gn/windows-amd64': 'https://chrome-infra-packages.appspot.com/gn/gn/windows-amd64@git_revision:0790d3043387c762a6bacb1ae0a9ebe883188ab2',
-  'pdfium\\testing\\corpus': 'https://pdfium.googlesource.com/pdfium_tests@db4764592814ededcb9a51c86fb8f8a1a6a9f5f7',
+  'pdfium\\testing\\corpus': 'https://pdfium.googlesource.com/pdfium_tests@5a68e87859476eb75d3e068bd406c4921a6be8e2',
   'pdfium\\third_party\\binutils': 'https://chromium.googlesource.com/chromium/src/third_party/binutils.git@92bfa0a5dcee9dc01173e39e5bff226b09af0254',
   'pdfium\\third_party\\depot_tools': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git@26af0d34d281440ad0dc6d2e43fe60f32ef62da0',
   'pdfium\\third_party\\freetype\\src': 'https://chromium.googlesource.com/chromium/src/third_party/freetype2.git@31757f969fba60d75404f31e8f1168bef5011770',

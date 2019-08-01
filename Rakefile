@@ -22,63 +22,67 @@ require 'rake/clean'
 # configuration
 # --------------------------------------------------------------------------- #
 PROJECT     = "pdfium"
+PATCH       = "../#{PROJECT}.patch"
 CONFIG      = "release"
-PLATFORMS   = ["x86", "x64"]
-KINDS       = ["full", "lite"]
+PLATFORMS   = ["x64", "x86"]
+KINDS       = ["lite", "full"]
 
 # --------------------------------------------------------------------------- #
 # clean
 # --------------------------------------------------------------------------- #
-CLEAN.include("out")
+CLEAN.include("#{PROJECT}/out")
 
 # --------------------------------------------------------------------------- #
 # default
 # --------------------------------------------------------------------------- #
-desc "Clean and build projects."
-task :default => [:clean, :build_all]
+desc "Clean, sync, and build projects."
+task :default => [:clean, :sync, :build_all]
+
+# --------------------------------------------------------------------------- #
+# sync
+# --------------------------------------------------------------------------- #
+desc "Run glicent sync."
+task :sync do
+    sh("git submodule update")
+    sh("gclient sync --with_branch_heads")
+end
 
 # --------------------------------------------------------------------------- #
 # build
 # --------------------------------------------------------------------------- #
-desc "Build projects with the specified platform and kind."
-task :build, [:platform, :kind] do |_, e|
-    e.with_defaults(:platform => PLATFORMS[0])
+desc "Build projects with the specified kind and platform."
+task :build, [:kind, :platform] do |_, e|
     e.with_defaults(:kind => KINDS[0])
+    e.with_defaults(:platform => PLATFORMS[0])
 
-    execute do
-        src  = "args-#{kind}-#{platform}.gn"
-        dest = "out/#{CONFIG}-#{kind}-#{platform}"
-        RakeFileUtils::mkdir_p(dest)
-        RakeFileUtils::cp(src, dest)
+    src  = "args/#{e.kind}-#{e.platform}.gn"
+    dest = "out/#{CONFIG}-#{e.kind}-#{e.platform}"
 
-        sh("gn gen #{dest}")
-        sh("ninja -C #{dest} #{PROJECT}")
-    end
+    RakeFileUtils::mkdir_p("#{PROJECT}/#{dest}")
+    RakeFileUtils::cp(src, "#{PROJECT}/#{dest}/args.gn")
+
+    cd(PROJECT) { build_core(dest) }
 end
 
 # --------------------------------------------------------------------------- #
 # build_all
 # --------------------------------------------------------------------------- #
-desc "Build projects with pre-defined platforms and kinds."
+desc "Build projects with pre-defined kinds and platforms."
 task :build_all do
-    BRANCHES.product(PLATFORMS).each { |set|
-        checkout(set[0]) do
-            Rake::Task[:build].reenable
-            Rake::Task[:build].invoke(set[1])
-        end
+    KINDS.product(PLATFORMS).each { |set|
+        Rake::Task[:build].reenable
+        Rake::Task[:build].invoke(set[0], set[1])
     }
 end
 
 # --------------------------------------------------------------------------- #
-# execute
+# build_core
 # --------------------------------------------------------------------------- #
-def execute(branch, &callback)
-    RakeFileUtils::cp("BUILD.gn", "#{PROJECT}/BUILD.gn")
-    cd(PROJECT) do
-        begin
-            callback.call()
-        ensure
-            sh("git checkout .")
-        end
-    end
+def build_core(dest)
+    sh("patch -p1 < #{PATCH}")
+    sh("gn gen #{dest}")
+    sh("ninja -C #{dest} #{PROJECT}")
+ensure
+    sh("git checkout .")
+    sh("git clean -fd")
 end

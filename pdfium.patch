@@ -1,0 +1,37 @@
+diff --git a/BUILD.gn b/BUILD.gn
+index 42f20931a..39a4fd1d5 100644
+--- a/BUILD.gn
++++ b/BUILD.gn
+@@ -22,6 +22,7 @@ config("pdfium_common_config") {
+   defines = [
+     "PNG_PREFIX",
+     "PNG_USE_READ_MACROS",
++    "FPDFSDK_EXPORTS",
+   ]
+ 
+   if (!use_system_libopenjpeg2) {
+@@ -142,7 +143,7 @@ group("pdfium_public_headers") {
+   ]
+ }
+ 
+-jumbo_component("pdfium") {
++shared_library("pdfium") {
+   libs = []
+   configs += [ ":pdfium_core_config" ]
+   public_configs = [ ":pdfium_public_config" ]
+diff --git a/public/fpdfview.h b/public/fpdfview.h
+index f5212599f..4c97a20cd 100644
+--- a/public/fpdfview.h
++++ b/public/fpdfview.h
+@@ -171,7 +171,11 @@ typedef int FPDF_OBJECT_TYPE;
+ #endif  // defined(FPDF_IMPLEMENTATION)
+ #endif  // defined(WIN32)
+ #else
++#if defined(WIN32) && defined(FPDFSDK_EXPORTS)
++#define FPDF_EXPORT __declspec(dllexport)
++#else
+ #define FPDF_EXPORT
++#endif  // defined(WIN32) && defined(FPDFSDK_EXPORTS)
+ #endif  // defined(COMPONENT_BUILD)
+ 
+ #if defined(WIN32) && defined(FPDFSDK_EXPORTS)
