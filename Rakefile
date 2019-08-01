@@ -22,8 +22,6 @@ require 'rake/clean'
 # configuration
 # --------------------------------------------------------------------------- #
 PROJECT     = "pdfium"
-PATCH       = "../#{PROJECT}.patch"
-CONFIG      = "release"
 PLATFORMS   = ["x64", "x86"]
 KINDS       = ["lite", "full"]
 
@@ -35,8 +33,8 @@ CLEAN.include("#{PROJECT}/out")
 # --------------------------------------------------------------------------- #
 # default
 # --------------------------------------------------------------------------- #
-desc "Clean, sync, and build projects."
-task :default => [:clean, :sync, :build_all]
+desc "Clean, sync, build, and create NuGet packages."
+task :default => [:clean, :sync, :build_all, :pack_all]
 
 # --------------------------------------------------------------------------- #
 # sync
@@ -48,6 +46,26 @@ task :sync do
 end
 
 # --------------------------------------------------------------------------- #
+# pack
+# --------------------------------------------------------------------------- #
+desc "Create the specified kind of NuGet package."
+task :pack, [:kind] do |_, e|
+    e.with_defaults(:kind => KINDS[0])
+    sh("nuget pack nuspec/cube.native.#{PROJECT}.#{e.kind}.nuspec")
+end
+
+# --------------------------------------------------------------------------- #
+# pack_all
+# --------------------------------------------------------------------------- #
+desc "Create all NuGet packages."
+task :pack_all do
+    KINDS.each { |e|
+        Rake::Task[:pack].reenable
+        Rake::Task[:pack].invoke(e)
+    }
+end
+
+# --------------------------------------------------------------------------- #
 # build
 # --------------------------------------------------------------------------- #
 desc "Build projects with the specified kind and platform."
@@ -56,7 +74,7 @@ task :build, [:kind, :platform] do |_, e|
     e.with_defaults(:platform => PLATFORMS[0])
 
     src  = "args/#{e.kind}-#{e.platform}.gn"
-    dest = "out/#{CONFIG}-#{e.kind}-#{e.platform}"
+    dest = "out/release-#{e.kind}-#{e.platform}"
 
     RakeFileUtils::mkdir_p("#{PROJECT}/#{dest}")
     RakeFileUtils::cp(src, "#{PROJECT}/#{dest}/args.gn")
@@ -79,7 +97,7 @@ end
 # build_core
 # --------------------------------------------------------------------------- #
 def build_core(dest)
-    sh("patch -p1 < #{PATCH}")
+    sh("patch -p1 < ../#{PROJECT}.patch")
     sh("gn gen #{dest}")
     sh("ninja -C #{dest} #{PROJECT}")
 ensure
