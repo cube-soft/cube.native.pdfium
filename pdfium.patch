@@ -1,8 +1,8 @@
 diff --git a/BUILD.gn b/BUILD.gn
-index c7c163818..91fdc67b8 100644
+index f27a2f4c1..a77d89147 100644
 --- a/BUILD.gn
 +++ b/BUILD.gn
-@@ -22,6 +22,7 @@ config("pdfium_common_config") {
+@@ -21,6 +21,7 @@ config("pdfium_common_config") {
    defines = [
      "PNG_PREFIX",
      "PNG_USE_READ_MACROS",
@@ -10,20 +10,20 @@ index c7c163818..91fdc67b8 100644
    ]
  
    if (!use_system_libopenjpeg2) {
-@@ -143,7 +144,7 @@ group("pdfium_public_headers") {
+@@ -140,7 +141,7 @@ group("pdfium_public_headers") {
    ]
  }
  
--jumbo_component("pdfium") {
+-component("pdfium") {
 +shared_library("pdfium") {
    libs = []
    configs += [ ":pdfium_core_config" ]
    public_configs = [ ":pdfium_public_config" ]
 diff --git a/public/fpdfview.h b/public/fpdfview.h
-index 84ba7896c..926611983 100644
+index f7b99f4e4..bab0013a9 100644
 --- a/public/fpdfview.h
 +++ b/public/fpdfview.h
-@@ -185,7 +185,11 @@ typedef int FPDF_TEXT_RENDERMODE;
+@@ -184,7 +184,11 @@ typedef int FPDF_TEXT_RENDERMODE;
  #endif  // defined(FPDF_IMPLEMENTATION)
  #endif  // defined(WIN32)
  #else
