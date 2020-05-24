@@ -26,11 +26,6 @@ PLATFORMS   = ["x64", "x86"]
 KINDS       = ["lite", "full"]
 
 # --------------------------------------------------------------------------- #
-# commands
-# --------------------------------------------------------------------------- #
-CMD = 'cmd.exe /C' 
-
-# --------------------------------------------------------------------------- #
 # clean
 # --------------------------------------------------------------------------- #
 CLEAN.include("#{PROJECT}/out")
@@ -46,9 +41,9 @@ task :default => [:clean, :sync, :build_all, :pack_all]
 # --------------------------------------------------------------------------- #
 desc "Run glicent sync."
 task :sync do
-    sh("git submodule init")
-    sh("git submodule update")
-    sh("#{CMD} gclient sync --with_branch_heads")
+    cmd("git submodule init")
+    cmd("git submodule update")
+    cmd("gclient sync --with_branch_heads")
 end
 
 # --------------------------------------------------------------------------- #
@@ -57,7 +52,7 @@ end
 desc "Create the specified kind of NuGet package."
 task :pack, [:kind] do |_, e|
     e.with_defaults(:kind => KINDS[0])
-    sh("#{CMD} nuget pack nuspec/cube.native.#{PROJECT}.#{e.kind}.nuspec")
+    cmd("nuget pack nuspec/cube.native.#{PROJECT}.#{e.kind}.nuspec")
 end
 
 # --------------------------------------------------------------------------- #
@@ -104,9 +99,16 @@ end
 # --------------------------------------------------------------------------- #
 def build_core(dest)
     sh("patch -p1 < ../#{PROJECT}.patch")
-    sh("#{CMD} gn gen #{dest}")
-    sh("#{CMD} ninja -C #{dest} #{PROJECT}")
+    cmd("gn gen #{dest}")
+    cmd("ninja -C #{dest} #{PROJECT}")
 ensure
-    sh("git checkout .")
-    sh("git clean -fd")
+    cmd("git checkout .")
+    cmd("git clean -fd")
+end
+
+# --------------------------------------------------------------------------- #
+# cmd
+# --------------------------------------------------------------------------- #
+def cmd(args)
+    sh("cmd.exe /c #{args}")
 end
