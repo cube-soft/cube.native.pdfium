@@ -1,6 +1,7 @@
 # Build arguments go here.
 # See "gn args <out_dir> --list" for available build arguments.
 
+chrome_pgo_phase = 0
 pdf_is_standalone = true
 is_component_build = false
 is_official_build = true
