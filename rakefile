@@ -43,7 +43,7 @@ desc "Run glicent sync."
 task :sync do
     cmd("git submodule init")
     cmd("git submodule update")
-    cmd("gclient sync -D --with_branch_heads")
+    patch { cd('..') { cmd("gclient sync -D --with_branch_heads") }}
 end
 
 # --------------------------------------------------------------------------- #
@@ -80,7 +80,10 @@ task :build, [:kind, :platform] do |_, e|
     RakeFileUtils::mkdir_p("#{PROJECT}/#{dest}")
     RakeFileUtils::cp(src, "#{PROJECT}/#{dest}/args.gn")
 
-    cd(PROJECT) { build_core(dest) }
+    patch {
+        cmd("gn gen #{dest}")
+        cmd("ninja -C #{dest} #{PROJECT}")
+    }
 end
 
 # --------------------------------------------------------------------------- #
@@ -95,15 +98,18 @@ task :build_all do
 end
 
 # --------------------------------------------------------------------------- #
-# build_core
+# patch
 # --------------------------------------------------------------------------- #
-def build_core(dest)
-    sh("patch -p1 < ../#{PROJECT}.patch")
-    cmd("gn gen #{dest}")
-    cmd("ninja -C #{dest} #{PROJECT}")
-ensure
-    cmd("git checkout .")
-    cmd("git clean -fd")
+def patch(&block)
+    cd(PROJECT) {
+        begin
+            sh("patch -p1 < ../#{PROJECT}.patch")
+            block.call
+        ensure
+            cmd("git checkout .")
+            cmd("git clean -fd")
+        end
+    }
 end
 
 # --------------------------------------------------------------------------- #
