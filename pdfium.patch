@@ -1,5 +1,5 @@
 diff --git a/BUILD.gn b/BUILD.gn
-index 5bcb9cb39..8ae3d6349 100644
+index e3ca0a1b3..a6a6b2ee3 100644
 --- a/BUILD.gn
 +++ b/BUILD.gn
 @@ -21,6 +21,7 @@ config("pdfium_common_config") {
@@ -10,7 +10,7 @@ index 5bcb9cb39..8ae3d6349 100644
    ]
  
    if (!use_system_libopenjpeg2) {
-@@ -138,7 +139,7 @@ group("pdfium_public_headers") {
+@@ -149,7 +150,7 @@ group("pdfium_public_headers") {
    ]
  }
  
@@ -19,190 +19,11 @@ index 5bcb9cb39..8ae3d6349 100644
    libs = []
    configs += [ ":pdfium_core_config" ]
    public_configs = [ ":pdfium_public_config" ]
-diff --git a/DEPS b/DEPS
-index 2d8f9926d..ceacd1de1 100644
---- a/DEPS
-+++ b/DEPS
-@@ -219,17 +219,27 @@ specific_include_rules = {
- }
- 
- hooks = [
-+  {
-+    # Ensure that the DEPS'd "depot_tools" has its self-update capability
-+    # disabled.
-+    'name': 'disable_depot_tools_selfupdate',
-+    'pattern': '.',
-+    'action': [ 'python',
-+                'third_party/depot_tools/update_depot_tools_toggle.py',
-+                '--disable',
-+    ],
-+  },
-   {
-     # Case-insensitivity for the Win SDK. Must run before win_toolchain below.
-     'name': 'ciopfs_linux',
-     'pattern': '.',
-     'condition': 'checkout_win and host_os == "linux"',
-     'action': [ 'python',
--                'pdfium/third_party/depot_tools/download_from_google_storage.py',
-+                'third_party/depot_tools/download_from_google_storage.py',
-                 '--no_resume',
-                 '--no_auth',
-                 '--bucket', 'chromium-browser-clang/ciopfs',
--                '-s', 'pdfium/build/ciopfs.sha1',
-+                '-s', 'build/ciopfs.sha1',
-     ]
-   },
-   {
-@@ -237,13 +247,14 @@ hooks = [
-     'name': 'win_toolchain',
-     'pattern': '.',
-     'condition': 'checkout_win',
--    'action': ['python', 'pdfium/build/vs_toolchain.py', 'update', '--force'],
-+    'action': ['python', 'build/vs_toolchain.py', 'update', '--force'],
-   },
-   {
-     # Update the Mac toolchain if necessary.
-     'name': 'mac_toolchain',
-     'pattern': '.',
--    'action': ['python', 'pdfium/build/mac_toolchain.py'],
-+    'condition': 'checkout_mac',
-+    'action': ['python', 'build/mac_toolchain.py'],
-   },
-   # Pull clang-format binaries using checked-in hashes.
-   {
-@@ -251,11 +262,11 @@ hooks = [
-     'pattern': '.',
-     'condition': 'host_os == "win"',
-     'action': [ 'python',
--                'pdfium/third_party/depot_tools/download_from_google_storage.py',
-+                'third_party/depot_tools/download_from_google_storage.py',
-                 '--no_resume',
-                 '--no_auth',
-                 '--bucket', 'chromium-clang-format',
--                '-s', 'pdfium/buildtools/win/clang-format.exe.sha1',
-+                '-s', 'buildtools/win/clang-format.exe.sha1',
-     ],
-   },
-   {
-@@ -263,11 +274,11 @@ hooks = [
-     'pattern': '.',
-     'condition': 'host_os == "mac"',
-     'action': [ 'python',
--                'pdfium/third_party/depot_tools/download_from_google_storage.py',
-+                'third_party/depot_tools/download_from_google_storage.py',
-                 '--no_resume',
-                 '--no_auth',
-                 '--bucket', 'chromium-clang-format',
--                '-s', 'pdfium/buildtools/mac/clang-format.sha1',
-+                '-s', 'buildtools/mac/clang-format.sha1',
-     ],
-   },
-   {
-@@ -275,11 +286,11 @@ hooks = [
-     'pattern': '.',
-     'condition': 'host_os == "linux"',
-     'action': [ 'python',
--                'pdfium/third_party/depot_tools/download_from_google_storage.py',
-+                'third_party/depot_tools/download_from_google_storage.py',
-                 '--no_resume',
-                 '--no_auth',
-                 '--bucket', 'chromium-clang-format',
--                '-s', 'pdfium/buildtools/linux64/clang-format.sha1',
-+                '-s', 'buildtools/linux64/clang-format.sha1',
-     ],
-   },
-   {
-@@ -287,42 +298,42 @@ hooks = [
-     'name': 'clang',
-     'pattern': '.',
-     'action': ['python',
--               'pdfium/tools/clang/scripts/update.py'
-+               'tools/clang/scripts/update.py'
-     ],
-   },
-   {
-     'name': 'sysroot_arm',
-     'pattern': '.',
-     'condition': 'checkout_linux and checkout_arm',
--    'action': ['python', 'pdfium/build/linux/sysroot_scripts/install-sysroot.py',
-+    'action': ['python', 'build/linux/sysroot_scripts/install-sysroot.py',
-                '--arch=arm'],
-   },
-   {
-     'name': 'sysroot_arm64',
-     'pattern': '.',
-     'condition': 'checkout_linux and checkout_arm64',
--    'action': ['python', 'pdfium/build/linux/sysroot_scripts/install-sysroot.py',
-+    'action': ['python', 'build/linux/sysroot_scripts/install-sysroot.py',
-                '--arch=arm64'],
-   },
-   {
-     'name': 'sysroot_x86',
-     'pattern': '.',
-     'condition': 'checkout_linux and (checkout_x86 or checkout_x64)',
--    'action': ['python', 'pdfium/build/linux/sysroot_scripts/install-sysroot.py',
-+    'action': ['python', 'build/linux/sysroot_scripts/install-sysroot.py',
-                '--arch=x86'],
-   },
-   {
-     'name': 'sysroot_mips',
-     'pattern': '.',
-     'condition': 'checkout_linux and checkout_mips',
--    'action': ['python', 'pdfium/build/linux/sysroot_scripts/install-sysroot.py',
-+    'action': ['python', 'build/linux/sysroot_scripts/install-sysroot.py',
-                '--arch=mips'],
-   },
-   {
-     'name': 'sysroot_x64',
-     'pattern': '.',
-     'condition': 'checkout_linux and checkout_x64',
--    'action': ['python', 'pdfium/build/linux/sysroot_scripts/install-sysroot.py',
-+    'action': ['python', 'build/linux/sysroot_scripts/install-sysroot.py',
-                '--arch=x64'],
-   },
-   {
-@@ -330,11 +341,11 @@ hooks = [
-     'pattern': '.',
-     'condition': 'checkout_instrumented_libraries',
-     'action': [ 'python',
--                'pdfium/third_party/depot_tools/download_from_google_storage.py',
-+                'third_party/depot_tools/download_from_google_storage.py',
-                 '--no_resume',
-                 '--no_auth',
-                 '--bucket', 'chromium-instrumented-libraries',
--                '-s', 'pdfium/third_party/instrumented_libraries/binaries/msan-chained-origins-trusty.tgz.sha1',
-+                '-s', 'third_party/instrumented_libraries/binaries/msan-chained-origins-trusty.tgz.sha1',
-               ],
-   },
-   {
-@@ -342,18 +353,18 @@ hooks = [
-     'pattern': '.',
-     'condition': 'checkout_instrumented_libraries',
-     'action': [ 'python',
--                'pdfium/third_party/depot_tools/download_from_google_storage.py',
-+                'third_party/depot_tools/download_from_google_storage.py',
-                 '--no_resume',
-                 '--no_auth',
-                 '--bucket', 'chromium-instrumented-libraries',
--                '-s', 'pdfium/third_party/instrumented_libraries/binaries/msan-no-origins-trusty.tgz.sha1',
-+                '-s', 'third_party/instrumented_libraries/binaries/msan-no-origins-trusty.tgz.sha1',
-               ],
-   },
-   {
-     # Update LASTCHANGE.
-     'name': 'lastchange',
-     'pattern': '.',
--    'action': ['python', 'pdfium/build/util/lastchange.py',
--               '-o', 'pdfium/build/util/LASTCHANGE'],
-+    'action': ['python', 'build/util/lastchange.py',
-+               '-o', 'build/util/LASTCHANGE'],
-   },
- ]
 diff --git a/public/fpdfview.h b/public/fpdfview.h
-index debe083be..4c7f875a1 100644
+index 27df9bd0b..a6254f45b 100644
 --- a/public/fpdfview.h
 +++ b/public/fpdfview.h
-@@ -192,7 +192,11 @@ typedef int FPDF_OBJECT_TYPE;
+@@ -193,7 +193,11 @@ typedef int FPDF_OBJECT_TYPE;
  #endif  // defined(FPDF_IMPLEMENTATION)
  #endif  // defined(WIN32)
  #else

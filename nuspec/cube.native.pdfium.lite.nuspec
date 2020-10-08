@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <package >
     <metadata>
-        <version>1.0.4183.0</version>
+        <version>1.0.4240.0</version>
         <id>Cube.Native.Pdfium.Lite</id>
         <title>Cube.Native.Pdfium.Lite</title>
         <authors>clown,cube-soft,PDFium Authors</authors>
         <owners>clown,cube-soft</owners>
         <description>PDFium library without V8 and XFA modules.</description>
-        <releaseNotes>Cube.Native.Pdfium.Lite 1.0.4183.0 is Chromium 85 compatible.</releaseNotes>
-        <copyright>Copyright © 2014 PDFium Authors. All rights reserved.</copyright>
+        <releaseNotes>Cube.Native.Pdfium.Lite 1.0.4240.0 is Chromium 86 compatible.</releaseNotes>
+        <copyright>Copyright © 2014 PDFium Authors.</copyright>
         <tags>Cube Native PDFium</tags>
         <license type="expression">BSD-3-Clause</license>
         <projectUrl>https://github.com/cube-soft/Cube.Native.Pdfium</projectUrl>
