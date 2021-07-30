@@ -1,8 +1,8 @@
 diff --git a/BUILD.gn b/BUILD.gn
-index b69dda68d..39a18746e 100644
+index bf0994aee..b12b372d6 100644
 --- a/BUILD.gn
 +++ b/BUILD.gn
-@@ -21,6 +21,7 @@ config("pdfium_common_config") {
+@@ -22,6 +22,7 @@ config("pdfium_common_config") {
    defines = [
      "PNG_PREFIX",
      "PNG_USE_READ_MACROS",
@@ -10,20 +10,20 @@ index b69dda68d..39a18746e 100644
    ]
  
    if (!use_system_libopenjpeg2) {
-@@ -149,7 +150,7 @@ group("pdfium_public_headers") {
+@@ -160,7 +161,7 @@ group("pdfium_public_headers") {
    ]
  }
  
 -component("pdfium") {
 +shared_library("pdfium") {
    libs = []
-   configs += [ ":pdfium_core_config" ]
+   configs += [ ":pdfium_strict_config" ]
    public_configs = [ ":pdfium_public_config" ]
 diff --git a/public/fpdfview.h b/public/fpdfview.h
-index e996d4a3b..1c76bcf03 100644
+index e37f9f431..77e54479f 100644
 --- a/public/fpdfview.h
 +++ b/public/fpdfview.h
-@@ -193,7 +193,11 @@ typedef int FPDF_OBJECT_TYPE;
+@@ -194,7 +194,11 @@ typedef int FPDF_OBJECT_TYPE;
  #endif  // defined(FPDF_IMPLEMENTATION)
  #endif  // defined(WIN32)
  #else
