@@ -10,11 +10,13 @@
         <releaseNotes>Cube.Native.Pdfium 95.0.4638.0 is Chromium 95 compatible.</releaseNotes>
         <copyright>Copyright © 2014 PDFium Authors.</copyright>
         <tags>Cube Native PDFium</tags>
+        <readme>docs\readme.md</readme>
         <license type="expression">BSD-3-Clause</license>
         <projectUrl>https://github.com/cube-soft/Cube.Native.Pdfium</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
     </metadata>
     <files>
+        <file src="..\readme.md" target="docs" />
         <file src="..\pdfium\out\release-full-x86\pdfium.dll" target="runtimes\win-x86\native" />
         <file src="..\pdfium\out\release-full-x64\pdfium.dll" target="runtimes\win-x64\native" />
     </files>
