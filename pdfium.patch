@@ -1,8 +1,8 @@
 diff --git a/BUILD.gn b/BUILD.gn
-index 885c2bb83..f1c45bc69 100644
+index bdb5daeef..23ca311c2 100644
 --- a/BUILD.gn
 +++ b/BUILD.gn
-@@ -22,6 +22,7 @@ config("pdfium_common_config") {
+@@ -23,6 +23,7 @@ config("pdfium_common_config") {
    defines = [
      "PNG_PREFIX",
      "PNG_USE_READ_MACROS",
@@ -10,7 +10,7 @@ index 885c2bb83..f1c45bc69 100644
    ]
  
    if (!use_system_libopenjpeg2) {
-@@ -165,7 +166,7 @@ group("pdfium_public_headers") {
+@@ -326,7 +327,7 @@ group("pdfium_public_headers") {
    ]
  }
  
