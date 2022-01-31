@@ -1,5 +1,5 @@
 diff --git a/BUILD.gn b/BUILD.gn
-index bdb5daeef..23ca311c2 100644
+index 717c8c35e..7f505264f 100644
 --- a/BUILD.gn
 +++ b/BUILD.gn
 @@ -23,6 +23,7 @@ config("pdfium_common_config") {
