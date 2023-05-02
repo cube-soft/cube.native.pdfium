@@ -9,5 +9,4 @@ is_debug = false
 pdf_enable_xfa = true
 pdf_enable_v8 = true
 pdf_use_skia = false
-pdf_use_skia_paths = false
 target_cpu = "x64"
