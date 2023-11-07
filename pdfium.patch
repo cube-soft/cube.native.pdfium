@@ -23,7 +23,7 @@ index 3ab1ec687..8eb30776f 100644
    libs = []
    configs += [ ":pdfium_strict_config" ]
 diff --git a/public/fpdfview.h b/public/fpdfview.h
-index 0c901a753..e5abcfca3 100644
+index c066e6cb4..e1cb0f6d6 100644
 --- a/public/fpdfview.h
 +++ b/public/fpdfview.h
 @@ -218,7 +218,11 @@ typedef int FPDF_OBJECT_TYPE;
