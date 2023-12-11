@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package >
     <metadata>
-        <version>119.0.6045.0</version>
+        <version>120.0.6099.0</version>
         <id>Cube.Native.Pdfium</id>
         <title>Cube.Native.Pdfium</title>
         <authors>clown,cube-soft,PDFium Authors</authors>
         <owners>clown,cube-soft</owners>
         <description>PDFium library.</description>
-        <releaseNotes>Cube.Native.Pdfium 119.0.6045.0 is Chromium 119 compatible.</releaseNotes>
+        <releaseNotes>Cube.Native.Pdfium 120.0.6099.0 is Chromium 120 compatible.</releaseNotes>
         <copyright>Copyright © 2014 PDFium Authors.</copyright>
         <tags>Cube Native PDFium</tags>
         <readme>docs\readme.md</readme>
@@ -17,6 +17,7 @@
     </metadata>
     <files>
         <file src="..\readme.md" target="docs" />
+        <file src="..\hack.txt" target="lib\net35" />
         <file src="..\pdfium\out\release-full-x86\pdfium.dll" target="runtimes\win-x86\native" />
         <file src="..\pdfium\out\release-full-x64\pdfium.dll" target="runtimes\win-x64\native" />
     </files>
