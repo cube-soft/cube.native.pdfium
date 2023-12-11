@@ -14,6 +14,9 @@
         <license type="expression">BSD-3-Clause</license>
         <projectUrl>https://github.com/cube-soft/cube.native.pdfium</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <dependencies>
+            <group targetFramework="net35" />
+        </dependencies>
     </metadata>
     <files>
         <file src="..\readme.md" target="docs" />
