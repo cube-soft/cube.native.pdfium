@@ -14,13 +14,9 @@
         <license type="expression">BSD-3-Clause</license>
         <projectUrl>https://github.com/cube-soft/cube.native.pdfium</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <dependencies>
-            <group targetFramework="net35" />
-        </dependencies>
     </metadata>
     <files>
         <file src="..\readme.md" target="docs" />
-        <file src="..\hack.txt" target="lib\net35" />
         <file src="..\pdfium\out\release-lite-x86\pdfium.dll" target="runtimes\win-x86\native" />
         <file src="..\pdfium\out\release-lite-x64\pdfium.dll" target="runtimes\win-x64\native" />
     </files>
