@@ -1,3 +1,0 @@
-This file is placed to avoid build errors. When using the old CSPROJ format,
-even a NuGet package with only unnamaged DLLs seems to cause an error
-if there is no file under the lib folder.
