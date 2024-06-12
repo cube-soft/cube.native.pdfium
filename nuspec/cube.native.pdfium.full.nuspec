@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package >
     <metadata>
-        <version>125.0.6422.0</version>
+        <version>126.0.6478.0</version>
         <id>Cube.Native.Pdfium</id>
         <title>Cube.Native.Pdfium</title>
         <authors>clown,cube-soft,PDFium Authors</authors>
         <owners>clown,cube-soft</owners>
         <description>PDFium library.</description>
-        <releaseNotes>Cube.Native.Pdfium 125.0.6422.0 is Chromium 125 compatible.</releaseNotes>
+        <releaseNotes>Cube.Native.Pdfium 126.0.6478.0 is Chromium 126 compatible.</releaseNotes>
         <copyright>Copyright © 2014 PDFium Authors.</copyright>
         <tags>Cube Native PDFium</tags>
         <readme>docs\readme.md</readme>
