@@ -1,0 +1,12 @@
+# Build arguments go here.
+# See "gn args <out_dir> --list" for available build arguments.
+
+chrome_pgo_phase = 0
+pdf_is_standalone = true
+is_component_build = false
+is_official_build = false
+is_debug = false
+pdf_enable_xfa = true
+pdf_enable_v8 = true
+pdf_use_skia = false
+target_cpu = "arm64"

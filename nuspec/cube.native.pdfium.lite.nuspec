@@ -19,5 +19,6 @@
         <file src="..\readme.md" target="docs" />
         <file src="..\pdfium\out\release-lite-x86\pdfium.dll" target="runtimes\win-x86\native" />
         <file src="..\pdfium\out\release-lite-x64\pdfium.dll" target="runtimes\win-x64\native" />
+        <file src="..\pdfium\out\release-lite-arm64\pdfium.dll" target="runtimes\win-arm64\native" />
     </files>
 </package>
