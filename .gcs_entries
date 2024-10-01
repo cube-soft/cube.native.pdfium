@@ -49,10 +49,10 @@
       "Win/clang-win-runtime-library-llvmorg-19-init-14561-gecea8371-1.tar.xz"
     ],
     "pdfium/third_party/rust-toolchain": [
-      "Linux_x64/rust-toolchain-3cf924b934322fd7b514600a7dc84fc517515346-2-llvmorg-19-init-14561-gecea8371.tar.xz",
-      "Mac/rust-toolchain-3cf924b934322fd7b514600a7dc84fc517515346-2-llvmorg-19-init-14561-gecea8371.tar.xz",
-      "Mac_arm64/rust-toolchain-3cf924b934322fd7b514600a7dc84fc517515346-2-llvmorg-19-init-14561-gecea8371.tar.xz",
-      "Win/rust-toolchain-3cf924b934322fd7b514600a7dc84fc517515346-2-llvmorg-19-init-14561-gecea8371.tar.xz"
+      "Linux_x64/rust-toolchain-3cf924b934322fd7b514600a7dc84fc517515346-3-llvmorg-19-init-14561-gecea8371.tar.xz",
+      "Mac/rust-toolchain-3cf924b934322fd7b514600a7dc84fc517515346-3-llvmorg-19-init-14561-gecea8371.tar.xz",
+      "Mac_arm64/rust-toolchain-3cf924b934322fd7b514600a7dc84fc517515346-3-llvmorg-19-init-14561-gecea8371.tar.xz",
+      "Win/rust-toolchain-3cf924b934322fd7b514600a7dc84fc517515346-3-llvmorg-19-init-14561-gecea8371.tar.xz"
     ]
   }
 }
