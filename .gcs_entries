@@ -41,18 +41,18 @@
   },
   "pdfium": {
     "pdfium/third_party/llvm-build/Release+Asserts": [
-      "Linux_x64/clang-llvmorg-20-init-1009-g7088a5ed-10.tar.xz",
-      "Mac/clang-llvmorg-20-init-1009-g7088a5ed-10.tar.xz",
-      "Mac/clang-mac-runtime-library-llvmorg-20-init-1009-g7088a5ed-10.tar.xz",
-      "Mac_arm64/clang-llvmorg-20-init-1009-g7088a5ed-10.tar.xz",
-      "Win/clang-llvmorg-20-init-1009-g7088a5ed-10.tar.xz",
-      "Win/clang-win-runtime-library-llvmorg-20-init-1009-g7088a5ed-10.tar.xz"
+      "Linux_x64/clang-llvmorg-20-init-3847-g69c43468-28.tar.xz",
+      "Mac/clang-llvmorg-20-init-3847-g69c43468-28.tar.xz",
+      "Mac/clang-mac-runtime-library-llvmorg-20-init-3847-g69c43468-28.tar.xz",
+      "Mac_arm64/clang-llvmorg-20-init-3847-g69c43468-28.tar.xz",
+      "Win/clang-llvmorg-20-init-3847-g69c43468-28.tar.xz",
+      "Win/clang-win-runtime-library-llvmorg-20-init-3847-g69c43468-28.tar.xz"
     ],
     "pdfium/third_party/rust-toolchain": [
-      "Linux_x64/rust-toolchain-595316b4006932405a63862d8fe65f71a6356293-5-llvmorg-20-init-1009-g7088a5ed.tar.xz",
-      "Mac/rust-toolchain-595316b4006932405a63862d8fe65f71a6356293-5-llvmorg-20-init-1009-g7088a5ed.tar.xz",
-      "Mac_arm64/rust-toolchain-595316b4006932405a63862d8fe65f71a6356293-5-llvmorg-20-init-1009-g7088a5ed.tar.xz",
-      "Win/rust-toolchain-595316b4006932405a63862d8fe65f71a6356293-5-llvmorg-20-init-1009-g7088a5ed.tar.xz"
+      "Linux_x64/rust-toolchain-009e73825af0e59ad4fc603562e038b3dbd6593a-2-llvmorg-20-init-3847-g69c43468.tar.xz",
+      "Mac/rust-toolchain-009e73825af0e59ad4fc603562e038b3dbd6593a-2-llvmorg-20-init-3847-g69c43468.tar.xz",
+      "Mac_arm64/rust-toolchain-009e73825af0e59ad4fc603562e038b3dbd6593a-2-llvmorg-20-init-3847-g69c43468.tar.xz",
+      "Win/rust-toolchain-009e73825af0e59ad4fc603562e038b3dbd6593a-2-llvmorg-20-init-3847-g69c43468.tar.xz"
     ]
   }
 }
