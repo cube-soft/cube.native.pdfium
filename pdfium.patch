@@ -1,5 +1,5 @@
 diff --git a/BUILD.gn b/BUILD.gn
-index c96235026..e2920c428 100644
+index c96235026..bcac71e44 100644
 --- a/BUILD.gn
 +++ b/BUILD.gn
 @@ -29,7 +29,9 @@ config("pdfium_common_config") {
@@ -13,15 +13,6 @@ index c96235026..e2920c428 100644
  
    if (!use_system_libopenjpeg2) {
      defines += [ "OPJ_STATIC" ]
-@@ -381,7 +383,7 @@ group("pdfium_public_headers") {
-   ]
- }
- 
--component("pdfium") {
-+shared_library("pdfium") {
-   output_name = "pdfium"
-   libs = []
-   configs += [ ":pdfium_strict_config" ]
 diff --git a/public/fpdfview.h b/public/fpdfview.h
 index e3cda006d..99a0d1915 100644
 --- a/public/fpdfview.h
