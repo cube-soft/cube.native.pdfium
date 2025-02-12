@@ -41,8 +41,8 @@ task :default => [:clean, :sync, :build_all, :pack_all]
 # --------------------------------------------------------------------------- #
 desc "Run glicent sync."
 task :sync do
-    cmd("git submodule init")
-    cmd("git submodule update")
+    git("submodule init")
+    git("submodule update")
     patch { cd('..') { cmd("gclient sync -D --with_branch_heads") }}
 end
 
@@ -106,8 +106,8 @@ def patch(&block)
             sh("patch -p1 < ../#{PROJECT}.patch")
             block.call
         ensure
-            cmd("git checkout .")
-            cmd("git clean -fd")
+            git("checkout .")
+            git("clean -fd")
         end
     }
 end
@@ -117,4 +117,11 @@ end
 # --------------------------------------------------------------------------- #
 def cmd(args)
     sh("cmd.exe /c #{args}")
+end
+
+# --------------------------------------------------------------------------- #
+# git
+# --------------------------------------------------------------------------- #
+def git(args)
+    cmd("git.exe #{args}")
 end
