@@ -1,5 +1,5 @@
 diff --git a/BUILD.gn b/BUILD.gn
-index 55422d63a..053cd654e 100644
+index 4edba9f43..0ed0d774f 100644
 --- a/BUILD.gn
 +++ b/BUILD.gn
 @@ -29,7 +29,9 @@ config("pdfium_common_config") {
@@ -13,7 +13,7 @@ index 55422d63a..053cd654e 100644
  
    if (!use_system_libopenjpeg2) {
      defines += [ "OPJ_STATIC" ]
-@@ -379,7 +381,7 @@ group("pdfium_public_headers") {
+@@ -219,7 +221,7 @@ group("pdfium_public_headers") {
    ]
  }
  
@@ -23,7 +23,7 @@ index 55422d63a..053cd654e 100644
    libs = []
    configs += [ ":pdfium_strict_config" ]
 diff --git a/public/fpdfview.h b/public/fpdfview.h
-index e3cda006d..99a0d1915 100644
+index 540d56906..e7efeac7c 100644
 --- a/public/fpdfview.h
 +++ b/public/fpdfview.h
 @@ -220,7 +220,11 @@ typedef int FPDF_OBJECT_TYPE;
