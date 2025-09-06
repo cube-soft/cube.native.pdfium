@@ -40,22 +40,29 @@
     ],
     "pdfium/build/linux/debian_bullseye_ppc64el-sysroot": [
       "485f85dde52830594f7b58ad53b9ca8ff6088b397cacb52aff682be5ffd6f198"
+    ],
+    "pdfium/build/linux/debian_trixie_riscv64-sysroot": [
+      "5c8ef4067f41a625d81113a6292180acf4ef49a2ffe015c2779123c133b8e250"
     ]
   },
   "pdfium": {
     "pdfium/third_party/llvm-build/Release+Asserts": [
-      "Linux_x64/clang-llvmorg-21-init-11777-gfd3fecfc-1.tar.xz",
-      "Mac/clang-llvmorg-21-init-11777-gfd3fecfc-1.tar.xz",
-      "Mac/clang-mac-runtime-library-llvmorg-21-init-11777-gfd3fecfc-1.tar.xz",
-      "Mac_arm64/clang-llvmorg-21-init-11777-gfd3fecfc-1.tar.xz",
-      "Win/clang-llvmorg-21-init-11777-gfd3fecfc-1.tar.xz",
-      "Win/clang-win-runtime-library-llvmorg-21-init-11777-gfd3fecfc-1.tar.xz"
+      "Linux_x64/clang-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
+      "Linux_x64/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
+      "Mac/clang-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
+      "Mac/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
+      "Mac/clang-mac-runtime-library-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
+      "Mac_arm64/clang-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
+      "Mac_arm64/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
+      "Win/clang-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
+      "Win/clang-win-runtime-library-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
+      "Win/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-12.tar.xz"
     ],
     "pdfium/third_party/rust-toolchain": [
-      "Linux_x64/rust-toolchain-4a0969e06dbeaaa43914d2d00b2e843d49aa3886-1-llvmorg-21-init-11777-gfd3fecfc.tar.xz",
-      "Mac/rust-toolchain-4a0969e06dbeaaa43914d2d00b2e843d49aa3886-1-llvmorg-21-init-11777-gfd3fecfc.tar.xz",
-      "Mac_arm64/rust-toolchain-4a0969e06dbeaaa43914d2d00b2e843d49aa3886-1-llvmorg-21-init-11777-gfd3fecfc.tar.xz",
-      "Win/rust-toolchain-4a0969e06dbeaaa43914d2d00b2e843d49aa3886-1-llvmorg-21-init-11777-gfd3fecfc.tar.xz"
+      "Linux_x64/rust-toolchain-22be76b7e259f27bf3e55eb931f354cd8b69d55f-3-llvmorg-21-init-16348-gbd809ffb.tar.xz",
+      "Mac/rust-toolchain-22be76b7e259f27bf3e55eb931f354cd8b69d55f-3-llvmorg-21-init-16348-gbd809ffb.tar.xz",
+      "Mac_arm64/rust-toolchain-22be76b7e259f27bf3e55eb931f354cd8b69d55f-3-llvmorg-21-init-16348-gbd809ffb.tar.xz",
+      "Win/rust-toolchain-22be76b7e259f27bf3e55eb931f354cd8b69d55f-3-llvmorg-21-init-16348-gbd809ffb.tar.xz"
     ]
   }
 }
