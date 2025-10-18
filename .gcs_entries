@@ -47,16 +47,16 @@
   },
   "pdfium": {
     "pdfium/third_party/llvm-build/Release+Asserts": [
-      "Linux_x64/clang-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
-      "Linux_x64/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
-      "Mac/clang-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
-      "Mac/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
-      "Mac/clang-mac-runtime-library-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
-      "Mac_arm64/clang-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
-      "Mac_arm64/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
-      "Win/clang-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
-      "Win/clang-win-runtime-library-llvmorg-21-init-16348-gbd809ffb-12.tar.xz",
-      "Win/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-12.tar.xz"
+      "Linux_x64/clang-llvmorg-21-init-16348-gbd809ffb-15.tar.xz",
+      "Linux_x64/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-15.tar.xz",
+      "Mac/clang-llvmorg-21-init-16348-gbd809ffb-15.tar.xz",
+      "Mac/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-15.tar.xz",
+      "Mac/clang-mac-runtime-library-llvmorg-21-init-16348-gbd809ffb-15.tar.xz",
+      "Mac_arm64/clang-llvmorg-21-init-16348-gbd809ffb-15.tar.xz",
+      "Mac_arm64/llvmobjdump-llvmorg-21-init-16348-gbd809ffb-15.tar.xz",
+      "Win/clang-llvmorg-21-init-16348-gbd809ffb-15.tar.xz",
+      "Win/clang-win-runtime-library-llvmorg-21-init-16348-gbd809ffb-15.tar.xz",
+      "Win/clangd-llvmorg-21-init-16348-gbd809ffb-15.tar.xz"
     ],
     "pdfium/third_party/rust-toolchain": [
       "Linux_x64/rust-toolchain-22be76b7e259f27bf3e55eb931f354cd8b69d55f-3-llvmorg-21-init-16348-gbd809ffb.tar.xz",
