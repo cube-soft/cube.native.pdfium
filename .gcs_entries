@@ -47,22 +47,22 @@
   },
   "pdfium": {
     "pdfium/third_party/llvm-build/Release+Asserts": [
-      "Linux_x64/clang-llvmorg-22-init-8940-g4d4cb757-1.tar.xz",
-      "Linux_x64/llvmobjdump-llvmorg-22-init-8940-g4d4cb757-1.tar.xz",
-      "Mac/clang-llvmorg-22-init-8940-g4d4cb757-1.tar.xz",
-      "Mac/llvmobjdump-llvmorg-22-init-8940-g4d4cb757-1.tar.xz",
-      "Mac/clang-mac-runtime-library-llvmorg-22-init-8940-g4d4cb757-1.tar.xz",
-      "Mac_arm64/clang-llvmorg-22-init-8940-g4d4cb757-1.tar.xz",
-      "Mac_arm64/llvmobjdump-llvmorg-22-init-8940-g4d4cb757-1.tar.xz",
-      "Win/clang-llvmorg-22-init-8940-g4d4cb757-1.tar.xz",
-      "Win/clang-win-runtime-library-llvmorg-22-init-8940-g4d4cb757-1.tar.xz",
-      "Win/clangd-llvmorg-22-init-8940-g4d4cb757-1.tar.xz"
+      "Linux_x64/clang-llvmorg-22-init-14273-gea10026b-1.tar.xz",
+      "Linux_x64/llvmobjdump-llvmorg-22-init-14273-gea10026b-1.tar.xz",
+      "Mac/clang-llvmorg-22-init-14273-gea10026b-1.tar.xz",
+      "Mac/clang-mac-runtime-library-llvmorg-22-init-14273-gea10026b-1.tar.xz",
+      "Mac/llvmobjdump-llvmorg-22-init-14273-gea10026b-1.tar.xz",
+      "Mac_arm64/clang-llvmorg-22-init-14273-gea10026b-1.tar.xz",
+      "Mac_arm64/llvmobjdump-llvmorg-22-init-14273-gea10026b-1.tar.xz",
+      "Win/clang-llvmorg-22-init-14273-gea10026b-1.tar.xz",
+      "Win/clang-win-runtime-library-llvmorg-22-init-14273-gea10026b-1.tar.xz",
+      "Win/llvmobjdump-llvmorg-22-init-14273-gea10026b-1.tar.xz"
     ],
     "pdfium/third_party/rust-toolchain": [
-      "Linux_x64/rust-toolchain-15283f6fe95e5b604273d13a428bab5fc0788f5a-1-llvmorg-22-init-8940-g4d4cb757.tar.xz",
-      "Mac/rust-toolchain-15283f6fe95e5b604273d13a428bab5fc0788f5a-1-llvmorg-22-init-8940-g4d4cb757.tar.xz",
-      "Mac_arm64/rust-toolchain-15283f6fe95e5b604273d13a428bab5fc0788f5a-1-llvmorg-22-init-8940-g4d4cb757.tar.xz",
-      "Win/rust-toolchain-15283f6fe95e5b604273d13a428bab5fc0788f5a-1-llvmorg-22-init-8940-g4d4cb757.tar.xz"
+      "Linux_x64/rust-toolchain-11339a0ef5ed586bb7ea4f85a9b7287880caac3a-1-llvmorg-22-init-14273-gea10026b.tar.xz",
+      "Mac/rust-toolchain-11339a0ef5ed586bb7ea4f85a9b7287880caac3a-1-llvmorg-22-init-14273-gea10026b.tar.xz",
+      "Mac_arm64/rust-toolchain-11339a0ef5ed586bb7ea4f85a9b7287880caac3a-1-llvmorg-22-init-14273-gea10026b.tar.xz",
+      "Win/rust-toolchain-11339a0ef5ed586bb7ea4f85a9b7287880caac3a-1-llvmorg-22-init-14273-gea10026b.tar.xz"
     ]
   }
 }
