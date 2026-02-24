@@ -1,5 +1,5 @@
 diff --git a/BUILD.gn b/BUILD.gn
-index a929c276e..901d2a456 100644
+index 06f259f95..24c45b21f 100644
 --- a/BUILD.gn
 +++ b/BUILD.gn
 @@ -29,7 +29,9 @@ config("pdfium_common_config") {
@@ -23,7 +23,7 @@ index a929c276e..901d2a456 100644
    libs = []
    configs += [ ":pdfium_strict_config" ]
 diff --git a/public/fpdfview.h b/public/fpdfview.h
-index d96556b47..c1c235b46 100644
+index 499e954a0..e30bc6fec 100644
 --- a/public/fpdfview.h
 +++ b/public/fpdfview.h
 @@ -220,7 +220,11 @@ typedef int FPDF_OBJECT_TYPE;
