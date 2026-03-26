@@ -47,22 +47,34 @@
   },
   "pdfium": {
     "pdfium/third_party/llvm-build/Release+Asserts": [
-      "Linux_x64/clang-llvmorg-22-init-14273-gea10026b-1.tar.xz",
-      "Linux_x64/llvmobjdump-llvmorg-22-init-14273-gea10026b-1.tar.xz",
-      "Mac/clang-llvmorg-22-init-14273-gea10026b-1.tar.xz",
-      "Mac/clang-mac-runtime-library-llvmorg-22-init-14273-gea10026b-1.tar.xz",
-      "Mac/llvmobjdump-llvmorg-22-init-14273-gea10026b-1.tar.xz",
-      "Mac_arm64/clang-llvmorg-22-init-14273-gea10026b-1.tar.xz",
-      "Mac_arm64/llvmobjdump-llvmorg-22-init-14273-gea10026b-1.tar.xz",
-      "Win/clang-llvmorg-22-init-14273-gea10026b-1.tar.xz",
-      "Win/clang-win-runtime-library-llvmorg-22-init-14273-gea10026b-1.tar.xz",
-      "Win/llvmobjdump-llvmorg-22-init-14273-gea10026b-1.tar.xz"
+      "Linux_x64/clang-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Linux_x64/clang-tidy-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Linux_x64/clangd-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Linux_x64/llvm-code-coverage-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Linux_x64/llvmobjdump-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac/clang-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac/clang-mac-runtime-library-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac/clang-tidy-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac/clangd-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac/llvm-code-coverage-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac/llvmobjdump-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac_arm64/clang-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac_arm64/clang-tidy-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac_arm64/clangd-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac_arm64/llvm-code-coverage-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Mac_arm64/llvmobjdump-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Win/clang-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Win/clang-tidy-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Win/clang-win-runtime-library-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Win/clangd-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Win/llvm-code-coverage-llvmorg-22-init-17020-gbd1bd178-2.tar.xz",
+      "Win/llvmobjdump-llvmorg-22-init-17020-gbd1bd178-2.tar.xz"
     ],
     "pdfium/third_party/rust-toolchain": [
-      "Linux_x64/rust-toolchain-11339a0ef5ed586bb7ea4f85a9b7287880caac3a-1-llvmorg-22-init-14273-gea10026b.tar.xz",
-      "Mac/rust-toolchain-11339a0ef5ed586bb7ea4f85a9b7287880caac3a-1-llvmorg-22-init-14273-gea10026b.tar.xz",
-      "Mac_arm64/rust-toolchain-11339a0ef5ed586bb7ea4f85a9b7287880caac3a-1-llvmorg-22-init-14273-gea10026b.tar.xz",
-      "Win/rust-toolchain-11339a0ef5ed586bb7ea4f85a9b7287880caac3a-1-llvmorg-22-init-14273-gea10026b.tar.xz"
+      "Linux_x64/rust-toolchain-a4cfac7093a1c1c7fbdb6bc75d6b6dc4d385fc69-2-llvmorg-22-init-17020-gbd1bd178.tar.xz",
+      "Mac/rust-toolchain-a4cfac7093a1c1c7fbdb6bc75d6b6dc4d385fc69-2-llvmorg-22-init-17020-gbd1bd178.tar.xz",
+      "Mac_arm64/rust-toolchain-a4cfac7093a1c1c7fbdb6bc75d6b6dc4d385fc69-2-llvmorg-22-init-17020-gbd1bd178.tar.xz",
+      "Win/rust-toolchain-a4cfac7093a1c1c7fbdb6bc75d6b6dc4d385fc69-2-llvmorg-22-init-17020-gbd1bd178.tar.xz"
     ]
   }
 }
