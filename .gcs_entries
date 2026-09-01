@@ -1,16 +1,16 @@
 {
   "pdfium/buildtools": {
     "pdfium/buildtools/win-format": [
-      "565cab9c66d61360c27c7d4df5defe1a78ab56d3"
+      "fb0bcaf406ad6f0bd6b4a6347d2abe78a94fb13e"
     ],
     "pdfium/buildtools/mac-format": [
-      "7d46d237f9664f41ef46b10c1392dcb559250f25"
+      "35ddc571ab654a4f58d7b35f394b04835d0b98f9"
     ],
     "pdfium/buildtools/mac_arm64-format": [
-      "8503422f469ae56cc74f0ea2c03f2d872f4a2303"
+      "945e45cbcb5443c3e569d5e0783fd012154fc4a7"
     ],
     "pdfium/buildtools/linux64-format": [
-      "79a7b4e5336339c17b828de10d80611ff0f85961"
+      "f5485c39451137ee943021a0fb63738b306c5026"
     ]
   },
   "pdfium/third_party/instrumented_libs": {
@@ -41,40 +41,43 @@
     "pdfium/build/linux/debian_bullseye_ppc64el-sysroot": [
       "8b37b8eefac38284c327146c05fa315b392c90a559888790a12b05a28fbcee40"
     ],
+    "pdfium/build/linux/debian_bullseye_s390x-sysroot": [
+      "46d561a32665a7ef4db334d66ba10b0db7750eea3fed1fee4896c2f5c4f87167"
+    ],
     "pdfium/build/linux/debian_trixie_riscv64-sysroot": [
       "2df6a2698a25258871b45a50d8b5079947b1ad1c63920c944690dfc2a71aab51"
     ]
   },
   "pdfium": {
     "pdfium/third_party/llvm-build/Release+Asserts": [
-      "Linux_x64/clang-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Linux_x64/clang-tidy-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Linux_x64/clangd-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Linux_x64/llvm-code-coverage-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Linux_x64/llvmobjdump-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac/clang-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac/clang-mac-runtime-library-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac/clang-tidy-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac/clangd-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac/llvm-code-coverage-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac/llvmobjdump-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac_arm64/clang-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac_arm64/clang-tidy-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac_arm64/clangd-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac_arm64/llvm-code-coverage-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Mac_arm64/llvmobjdump-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Win/clang-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Win/clang-tidy-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Win/clang-win-runtime-library-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Win/clangd-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Win/llvm-code-coverage-llvmorg-23-init-10931-g20b6ec66-11.tar.xz",
-      "Win/llvmobjdump-llvmorg-23-init-10931-g20b6ec66-11.tar.xz"
+      "Linux_x64/clang-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Linux_x64/clang-tidy-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Linux_x64/clangd-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Linux_x64/llvm-code-coverage-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Linux_x64/llvmobjdump-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac/clang-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac/clang-mac-runtime-library-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac/clang-tidy-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac/clangd-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac/llvm-code-coverage-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac/llvmobjdump-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac_arm64/clang-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac_arm64/clang-tidy-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac_arm64/clangd-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac_arm64/llvm-code-coverage-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Mac_arm64/llvmobjdump-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Win/clang-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Win/clang-tidy-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Win/clang-win-runtime-library-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Win/clangd-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Win/llvm-code-coverage-llvmorg-23-init-19482-g53d18800-1.tar.xz",
+      "Win/llvmobjdump-llvmorg-23-init-19482-g53d18800-1.tar.xz"
     ],
     "pdfium/third_party/rust-toolchain": [
-      "Linux_x64/rust-toolchain-4c4205163abcbd08948b3efab796c543ba1ea687-5-llvmorg-23-init-10931-g20b6ec66.tar.xz",
-      "Mac/rust-toolchain-4c4205163abcbd08948b3efab796c543ba1ea687-5-llvmorg-23-init-10931-g20b6ec66.tar.xz",
-      "Mac_arm64/rust-toolchain-4c4205163abcbd08948b3efab796c543ba1ea687-5-llvmorg-23-init-10931-g20b6ec66.tar.xz",
-      "Win/rust-toolchain-4c4205163abcbd08948b3efab796c543ba1ea687-5-llvmorg-23-init-10931-g20b6ec66.tar.xz"
+      "Linux_x64/rust-toolchain-b998449636a48e2c4a362809085b600a0174e1f2-2-llvmorg-23-init-19482-g53d18800.tar.xz",
+      "Mac/rust-toolchain-b998449636a48e2c4a362809085b600a0174e1f2-2-llvmorg-23-init-19482-g53d18800.tar.xz",
+      "Mac_arm64/rust-toolchain-b998449636a48e2c4a362809085b600a0174e1f2-2-llvmorg-23-init-19482-g53d18800.tar.xz",
+      "Win/rust-toolchain-b998449636a48e2c4a362809085b600a0174e1f2-2-llvmorg-23-init-19482-g53d18800.tar.xz"
     ]
   }
 }
