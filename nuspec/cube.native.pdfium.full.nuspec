@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package >
     <metadata>
-        <version>154.0.8037.0</version>
+        <version>155.0.8059.0</version>
         <id>Cube.Native.Pdfium</id>
         <title>Cube.Native.Pdfium</title>
         <authors>clown,cube-soft,PDFium Authors</authors>
         <owners>clown,cube-soft</owners>
         <description>PDFium library.</description>
-        <releaseNotes>Cube.Native.Pdfium 154.0.8037.0 is Chromium 154 compatible.</releaseNotes>
+        <releaseNotes>Cube.Native.Pdfium 155.0.8059.0 is Chromium 155 compatible.</releaseNotes>
         <copyright>Copyright © 2014 PDFium Authors.</copyright>
         <tags>Cube Native PDFium</tags>
         <readme>docs\readme.md</readme>
