@@ -15,8 +15,8 @@
   },
   "pdfium/third_party/instrumented_libs": {
     "pdfium/third_party/instrumented_libs/binaries": [
-      "9329714322846c2b47dd518ac08e437b8c7d8075c514dc7ec3eb3e3a1e0faeb6",
-      "a749c9e47cb4584bc944c887440b1d1c51501f7d9bb99eea276ebcba0aa6c1ec"
+      "d9e7f16940320353e061e06111705d49ae5043ed092db352b682dd4a184fa08f",
+      "36a06c938048f0920cf41dce2d58aae7712aa24fdd91787250b2a6c21cf4283b"
     ]
   },
   "pdfium/build": {
