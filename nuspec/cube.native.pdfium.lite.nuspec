@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package>
     <metadata>
-        <version>156.0.8078.0</version>
+        <version>157.0.8103.0</version>
         <id>Cube.Native.Pdfium.Lite</id>
         <title>Cube.Native.Pdfium.Lite</title>
         <authors>clown,cube-soft,PDFium Authors</authors>
         <owners>clown,cube-soft</owners>
         <description>PDFium library without V8 and XFA modules.</description>
-        <releaseNotes>Cube.Native.Pdfium.Lite 156.0.8078.0 is Chromium 156 compatible.</releaseNotes>
+        <releaseNotes>Cube.Native.Pdfium.Lite 157.0.8103.0 is Chromium 157 compatible.</releaseNotes>
         <copyright>Copyright © 2014 PDFium Authors.</copyright>
         <tags>Cube Native PDFium</tags>
         <readme>docs\readme.md</readme>
