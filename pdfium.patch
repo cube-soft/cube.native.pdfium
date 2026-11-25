@@ -1,5 +1,5 @@
 diff --git a/BUILD.gn b/BUILD.gn
-index ae553d200..90a3c72b9 100644
+index 6834a5e15..5dbb564bf 100644
 --- a/BUILD.gn
 +++ b/BUILD.gn
 @@ -21,7 +21,9 @@ config("pdfium_common_config") {
@@ -13,7 +13,7 @@ index ae553d200..90a3c72b9 100644
  
    if (!use_system_libopenjpeg2) {
      defines += [ "OPJ_STATIC" ]
-@@ -228,7 +230,7 @@ group("pdfium_public_headers") {
+@@ -229,7 +231,7 @@ group("pdfium_public_headers") {
    ]
  }
  
